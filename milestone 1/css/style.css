@@ -1,0 +1,141 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+.common-col {
+    float: left;
+}
+
+img {
+    width: 100%;
+}
+
+i {
+    margin: 0 8px;
+    color: #b1b1b1;
+}
+
+.common-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.common-row {
+    display: flex;
+    align-items: center;
+    background-color: #eaeaea;
+}
+
+.common-box-avatar-name-left {
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.common-box-icon-right {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+/* common text style */
+
+body {
+    font-family: sans-serif;
+}
+
+.common-small-text {
+    font-size: 10px;
+    color: #757575;
+}
+
+.common-name-avatar-text {
+    font-size: 13px;
+    
+}
+
+.common-date-text {
+
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #009587;
+    position: relative;
+}
+
+.container {
+    width: 80%;
+    height: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* test */
+    background-color: white;
+}
+
+/* left part main */
+.menu-col-left {
+    width: 35%;
+    height: 100%;
+    /* test */
+    background-color: white;
+}
+
+.border-right {
+    border-right: 1px solid #d6d6d6;
+}
+
+.notification-row {
+    height: 60px;
+    background-color: #8edafb;
+}
+
+.container-search {
+    background-color: #fafafa;
+    padding: 3px;
+}
+
+.search-row {
+    height: 25px;
+    background-color: white;
+}
+
+.margin-search {
+    margin: 0 20px;
+}
+
+
+/* right part main */
+.main-content-col-right {
+    width: 65%;
+    height: 100%;
+    position: relative;
+    /* test */
+    background-color: rgb(82, 160, 163);
+}
+
+.typing-bar-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+}
+
+.typing-bar {
+    background-color: tomato;
+    width: 70%;
+    height: 90%;
+}
