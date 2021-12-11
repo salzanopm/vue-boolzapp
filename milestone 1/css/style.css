@@ -188,9 +188,7 @@ main {
     padding: 20px;
 }
 
-.margin-message-right {
-    margin: 10px;
-    padding: 10px;
+div[class$="message-right"] {
     text-align: right;
 }
 
