@@ -154,7 +154,11 @@ main {
     margin: 0 20px;
 }
 
-
+/* contacts */
+.contact-list {
+    display: flex;
+    align-items: center;
+}
 /* right part main */
 .main-content-col-right {
     width: 65%;
