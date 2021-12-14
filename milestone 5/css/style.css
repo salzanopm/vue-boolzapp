@@ -9,6 +9,11 @@ a {
     color: #757575;
 }
 
+li {
+    list-style-type: none;
+    text-transform: lowercase;
+}
+
 /* COMMON */
 .common-col {
     float: left;
@@ -62,17 +67,55 @@ i {
     border-radius: 8px;
     position: relative;
     display: block;
-    min-width: 150px;
+    
 }
 
-i.fas.fa-chevron-down.chevron-down {
+i.fas.fa-chevron-down.chevron-down-sent {
     display: none;
+    position: absolute; 
+    top: 30px;
+    left: 0;
 }
 
-.common-single-chat-container:hover i.fas.fa-chevron-down.chevron-down {
+i.fas.fa-chevron-down.chevron-down-received {
+    display: none;
+    position: absolute; 
+    top: 30px;
+    right: 0;
+}
+
+.menu-info-delete {
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    color: black;
+    padding: 15px;
+    
+}
+
+.menu-info-delete-sent {
+    right: 6px;
+}
+
+.menu-info-delete-received {
+    left: 6px;
+}
+
+
+
+.common-single-chat-container:hover i.fas.fa-chevron-down {
     display: inline-block;
 }
 
+
+.common-single-chat-container:hover .menu-info-delete-sent {
+    display: inline-block;
+}
+
+.common-single-chat-container:hover .menu-info-delete-received {
+    display: inline-block;
+}
 
 .chevron-invisible {
     display: none;
@@ -85,7 +128,14 @@ i.fas.fa-chevron-down.chevron-down {
 .common-date {
     position: absolute;
     bottom: 0;
-    right: 10px;
+    right: 30px;
+    padding-bottom: 3px;
+}
+
+.common-date-left {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
     padding-bottom: 3px;
 }
 /* common text style */
@@ -217,12 +267,12 @@ main {
 }
 
 .margin-message {
-    margin: 10px 50% 10px 0;
+    margin: 10px 20% 10px 0;
     padding: 20px;
 }
 
 .margin-message-right {
-    margin: 10px 0 10px 50% ;
+    margin: 10px 0 10px 20% ;
     padding: 20px;
     text-align: right;
 }

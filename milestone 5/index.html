@@ -109,19 +109,37 @@
                                 class="common-single-chat-container common-chat-text"
                                 :class="message.status === 'sent' ? 'sent' : 'received'"
                             >
-                                <i 
+                                <i  
+                                    
                                     v-if="message.status === 'received'"
-                                    class="fas fa-chevron-down chevron-down"
+                                    class="fas fa-chevron-down chevron-down-sent"
                                 >
+                                
                                 </i>
+                                <span 
+                                    class="menu-info-delete menu-info-delete-sent"
+                                    v-if="message.status === 'sent'"
+                                >
+                                    <p @click="deleteMessage()">delete message</p>
+                                    <p>info</p>
+                                </span>
                                 {{message.text}}
+                                <span 
+                                    class="menu-info-delete menu-info-delete-received"
+                                    v-if="message.status === 'received'"
+                                >
+                                    <p @click="deleteMessage">delete message</p>
+                                    <p>info</p>
+                                </span>
                                 <i 
                                     v-if="message.status === 'sent'"
-                                    class="fas fa-chevron-down chevron-down"
+                                    class="fas fa-chevron-down chevron-down-received"
                                 >
                                 </i>
                                 <span 
-                                    class="common-date common-small-text">
+                                    class="common-date common-small-text"
+                                    :class="message.status === 'sent' ? 'common-date' : 'common-date-left'"
+                                >
                                     {{message.date}}
                                 </span>
                             </span>

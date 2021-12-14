@@ -158,6 +158,12 @@ const app = new Vue(
                     
 
                 });              
+            },
+            deleteMessage: function() {
+                this.contacts[this.active].messages.pop(this.newMessage)
+            },
+            infoMessage: function() {
+                
             }
             
            
