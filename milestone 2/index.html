@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <!-- start main -->
+    <main>
+        <!-- start root container for vuejs -->
+        <div id="root">
+            <!-- start container -->
+            <div class="container">
+                <!-- start container menu left -->
+                <div class="menu-col-left common-col">
+                    <!-- start user profile row -->
+                    <div class="common-row border-right ">
+                        <div class="common-box-avatar-name-left ">
+                            <img class="common-circle"src="../milestone 1/img/avatar_io.jpg" alt="my avatar image">
+                            <p class="common-name-avatar-text">Nome Utente</p>
+                        </div>
+                        <div class="common-box-icon-right ">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <!-- end user profile row -->
+                    <!-- start notification row -->
+                    <div class="common-row notification-row">
+                        <div class="notification-box">
+                            <div class="notification-icon">
+                                <i class="fas fa-bell-slash  common-circle"></i>
+                            </div>
+                            <div class="name-and-description">
+                                <p class="common-name-avatar-text">Ricevi notifiche di nuovi messaggi</p>
+                                <p class="common-small-text"><a href="#">Attiva notifiche desktop</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end notification row -->
+                    <!-- start search row -->
+                    <div class="container-search">
+                        <div class="common-row search-row">
+                            <div class="common-box-avatar-name-left ">
+                                <i class="fas fa-search fa-xs margin-search"></i>
+                                <p class="common-small-text">Cerca o inizia una nuova chat</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end search row -->
+                    <!-- start contacts container -->
+                    <div class="contact-container">
+                        <ul>
+                            <!-- print name and avatar img -->
+                            <li @click="activeContact(index)" v-for="(contact, index) in contacts" class="contact-list">
+                                <img class="common-circle" :src="'img/avatar' + contact.avatar + '.jpg'" alt="avatar">
+                                <span>{{contact.name}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end contacts container -->
+                </div>
+                <!-- end container menu left -->
+                <!-- start container content right -->
+                <div class="main-content-col-right common-col">
+                    <!-- start person chat row -->
+                    <div class="common-row">
+                        <div class="common-box-avatar-name-left ">
+                            <img class="common-circle" :src="'../milestone 1/img/avatar' + contacts[active].avatar + '.jpg'" alt="my avatar image">
+                            <div class="name-and-description">
+                                <p class="common-name-avatar-text">{{contacts[active].name}}</p>
+                                <p class="common-small-text">Ultimo accesso oggi alle</p>
+                            </div>
+                        </div>
+                        <div class="common-box-icon-right ">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <!-- end person chat row -->
+                    <!-- start container chat -->
+                    <div  class="container-chat">
+                        <div 
+                            v-for="(message, index) in contacts[active].messages"
+                            :class="message.status === 'sent' ? 'margin-message' : 'margin-message-right'"
+                        >
+                            <span 
+                                class="common-single-chat-container common-chat-text"
+                                :class="message.status === 'sent' ? 'sent' : 'received'"
+                            >
+                                {{message.text}}
+                            </span>
+                        </div>
+                        <!-- <div class="margin-message">
+                            <span class="common-single-chat-container received common-chat-text">
+                                La Marianna va in campagna 
+                            </span>
+                        </div>
+                        <div class="margin-message-right">
+                            <span class="common-single-chat-container sent common-chat-text">
+                                Sicuro di non aver sbagliato chat?
+                            </span>
+                        </div>
+                        <div class="margin-message">
+                            <span class="common-single-chat-container received common-chat-text">
+                                Ah scusa!
+                            </span>
+                        </div> -->
+                    </div>
+                    <!-- end ontainer chat -->
+                    <!-- start type bar container -->
+                    <div class="typing-bar-container common-row">
+                        <div class="emoji-icon">
+                            <i class="far fa-smile common-icon-darker"></i>
+                        </div>
+                        <div class="typing-bar common-small-text">
+                            scrivi un messaggio
+                        </div>
+                        <div class="microphone-icon">
+                            <i class="fas fa-microphone common-icon-darker"></i>
+                        </div>
+                    </div>
+                    <!-- end type bar container -->
+                </div>
+                <!-- end container content right -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end root container for vuejs -->
+    </main>
+    <!-- start main -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
