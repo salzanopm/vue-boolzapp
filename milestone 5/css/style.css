@@ -91,7 +91,8 @@ i.fas.fa-chevron-down.chevron-down-received {
     top: 40px;
     color: black;
     padding: 15px;
-    
+    cursor: pointer;
+
 }
 
 .menu-info-delete-sent {
@@ -242,12 +243,20 @@ main {
     align-items: center;
     cursor: pointer;
 }
+
+.contact-list.selected-contact {
+    background-color: lightgray;
+}
+
 /* right part main */
 .main-content-col-right {
     width: 65%;
     height: 100%;
-    position: relative;
-    
+    position: relative;  
+}
+
+.contact-list:hover {
+    background-color: lightgray;
 }
 
 /* container chat */
