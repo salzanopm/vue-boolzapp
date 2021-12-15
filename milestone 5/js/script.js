@@ -164,9 +164,10 @@ const app = new Vue(
             },
             infoMessage: function() {
                 
-            }
+            },
+            popUp: function() {
             
-           
+        }
             
         }
     }

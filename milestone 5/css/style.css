@@ -15,6 +15,11 @@ li {
 }
 
 /* COMMON */
+.visible {
+    display: block;
+}
+
+
 .common-col {
     float: left;
     min-width: 200px;
@@ -106,15 +111,6 @@ i.fas.fa-chevron-down.chevron-down-received {
 
 
 .common-single-chat-container:hover i.fas.fa-chevron-down {
-    display: inline-block;
-}
-
-
-.common-single-chat-container:hover .menu-info-delete-sent {
-    display: inline-block;
-}
-
-.common-single-chat-container:hover .menu-info-delete-received {
     display: inline-block;
 }
 
@@ -276,14 +272,18 @@ main {
 }
 
 .margin-message {
-    margin: 10px 20% 10px 0;
+    margin: 10px auto 10px 0;
     padding: 20px;
+    width: max-content;
+    min-width: 200px;
 }
 
 .margin-message-right {
-    margin: 10px 0 10px 20% ;
+    margin: 10px 0 10px auto ;
     padding: 20px;
+    width: max-content;
     text-align: right;
+    min-width: 200px;
 }
 
 .typing-bar-container.common-row {
